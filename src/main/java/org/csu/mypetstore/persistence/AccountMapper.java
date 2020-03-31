@@ -13,4 +13,19 @@ public interface AccountMapper {
 
     //插入账户
     void insertAccount(Account account);
+
+    //插入profile
+    void insertProfile(Account account);
+
+    //插入登录
+    void insertSignon(Account account);
+
+    //更新账户
+    void updateAccount(Account account);
+
+    //更新profile
+    void updateProfile(Account account);
+
+    //更新signon
+    void updateSignon(Account account);
 }

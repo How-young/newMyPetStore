@@ -11,6 +11,14 @@ public class LineItem {
     private Item item;
     private BigDecimal total;
 
+    public LineItem(int lineNumber, CartItem cartItem) {
+        this.lineNumber = lineNumber;
+        this.quantity = cartItem.getQuantity();
+        this.itemId = cartItem.getItem().getItemId();
+        this.unitPrice = cartItem.getItem().getListPrice();
+        this.item = cartItem.getItem();
+    }
+
     public int getOrderId() {
         return orderId;
     }

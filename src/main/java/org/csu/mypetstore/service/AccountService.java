@@ -24,4 +24,29 @@ public class AccountService {
     public void insertAccount(Account account){
         accountMapper.insertAccount(account);
     }
+
+    //插入profile
+    public void insertProfile(Account account){
+        accountMapper.insertProfile(account);
+    }
+
+    //插入signon
+    public void insertSignon(Account account){
+        accountMapper.insertSignon(account);
+    }
+
+    //更新account
+    public void updateAccount(Account account){
+        accountMapper.updateAccount(account);
+    }
+
+    //更新profile
+    public void updateProfile(Account account){
+        accountMapper.updateProfile(account);
+    }
+
+    //更新signon
+    public void updateSignon(Account account){
+        accountMapper.updateSignon(account);
+    }
 }

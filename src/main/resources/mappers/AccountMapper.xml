@@ -9,6 +9,39 @@
         VALUES
             (#{email}, #{firstName}, #{lastName}, #{status}, #{address1},  #{address2,jdbcType=VARCHAR}, #{city}, #{state}, #{zip}, #{country}, #{phone}, #{username})
     </insert>
+    <insert id="insertProfile">
+        INSERT INTO PROFILE (LANGPREF, FAVCATEGORY, USERID)
+        VALUES (#{languagePreference}, #{favouriteCategoryId}, #{username})
+    </insert>
+    <insert id="insertSignon">
+        INSERT INTO SIGNON (PASSWORD,USERNAME)
+        VALUES (#{password}, #{username})
+    </insert>
+    <update id="updateAccount">
+        UPDATE ACCOUNT SET
+            EMAIL = #{email},
+            FIRSTNAME = #{firstName},
+            LASTNAME = #{lastName},
+            STATUS = #{status},
+            ADDR1 = #{address1},
+            ADDR2 = #{address2,jdbcType=VARCHAR},
+            CITY = #{city},
+            STATE = #{state},
+            ZIP = #{zip},
+            COUNTRY = #{country},
+            PHONE = #{phone}
+        WHERE USERID = #{username}
+    </update>
+    <update id="updateProfile">
+        UPDATE PROFILE SET
+            LANGPREF = #{languagePreference},
+            FAVCATEGORY = #{favouriteCategoryId}
+        WHERE USERID = #{username}
+    </update>
+    <update id="updateSignon">
+        UPDATE SIGNON SET PASSWORD = #{password}
+        WHERE USERNAME = #{username}
+    </update>
     <select id="getAccountByUsername" parameterType="string" resultType="org.csu.mypetstore.domain.Account">
         SELECT
             SIGNON.USERNAME,
