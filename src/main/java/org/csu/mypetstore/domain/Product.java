@@ -5,6 +5,8 @@ public class Product {
     private String categoryId;
     private String name;
     private String description;
+    private String descriptionIamge;
+    private String descriptionText;
 
     public String getProductId() {
         return productId;
@@ -36,5 +38,21 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescriptionIamge() {
+        return descriptionIamge;
+    }
+
+    public void setDescriptionIamge(String descriptionIamge) {
+        this.descriptionIamge = descriptionIamge;
+    }
+
+    public String getDescriptionText() {
+        return descriptionText;
+    }
+
+    public void setDescriptionText(String descriptionText) {
+        this.descriptionText = descriptionText;
     }
 }

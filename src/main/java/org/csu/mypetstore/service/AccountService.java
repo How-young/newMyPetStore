@@ -49,4 +49,9 @@ public class AccountService {
     public void updateSignon(Account account){
         accountMapper.updateSignon(account);
     }
+
+//    public Account deleteSignon(Boolean isLogin){
+//        Account account = new Account();
+//        account;
+//    }
 }

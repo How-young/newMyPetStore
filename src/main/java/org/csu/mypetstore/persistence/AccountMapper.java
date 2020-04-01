@@ -28,4 +28,9 @@ public interface AccountMapper {
 
     //更新signon
     void updateSignon(Account account);
+//
+//    //判断是否登录
+//    Account deleteSignon(Boolean isLogin);
+
+    boolean usernameIsExist(String username);
 }
